@@ -1,3 +1,4 @@
+import Layout from '@/components/layout';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
