@@ -1,0 +1,9 @@
+{
+  "name": "Dino's",
+  "short_name": "Dino's",
+  "description": "디지털 노마드를 위한 서비스",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff"
+}
