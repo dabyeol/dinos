@@ -4,13 +4,13 @@ import ImageCard from '@/components/card/image-card';
 import ImageCardRect from '@/components/card/image-card-rect';
 import CardSlider from '@/components/slider/card-slider';
 import Titlebar from '@/components/titlebar';
-import { Container, Wrapper } from '@/lib/styles';
+import { Container, Section } from '@/lib/styles';
 import { getUnsplashUrl } from '@/lib/utils';
 
 export default function Home() {
   return (
     <Container>
-      <Wrapper>
+      <Section>
         <Titlebar title="도시" />
         <CardSlider title="지금 뜨는 도시">
           <ImageCardRect
@@ -66,9 +66,9 @@ export default function Home() {
             src={getUnsplashUrl('hgFX7SydvFk')}
           />
         </CardSlider>
-      </Wrapper>
+      </Section>
 
-      <Wrapper>
+      <Section>
         <Titlebar title="매거진" more />
         <ImageCard title="태국에서 살기" src={getUnsplashUrl('uDDGsbYdk3k')} />
         <ImageCard
@@ -76,16 +76,16 @@ export default function Home() {
           src={getUnsplashUrl('jqkGK3ofxi8')}
         />
         <Button title="더보기" />
-      </Wrapper>
+      </Section>
 
-      <Wrapper>
+      <Section>
         <Titlebar title="가이드" more />
         <CardSlider>
           <Book title="디지털 노마드란 무엇일까?" color="#096" />
           <Book title="디지털 노마드 준비하기" color="#c80" />
           <Book title="일하기 좋은 곳 찾기" color="#08c" />
         </CardSlider>
-      </Wrapper>
+      </Section>
     </Container>
   );
 }

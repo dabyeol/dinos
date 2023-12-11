@@ -24,7 +24,12 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^9.0.0",
+    "postcss-styled-syntax": "^0.5.0",
     "prettier": "^3.0.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^4.1.0",
     "typescript": "^5"
   }
 }

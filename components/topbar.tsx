@@ -7,42 +7,42 @@ import Image from 'next/image';
 import ListIcon from './list-icon';
 
 const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-background-alt);
-  overflow: hidden;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 24px;
+  overflow: hidden;
+  background-color: var(--color-float);
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
 `;
 
 const Left = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
 `;
 
 const Selected = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Right = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 16px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Profile = styled(Image)`
@@ -60,7 +60,7 @@ export default function Topbar() {
         </Selected>
       </Left>
       <Right>
-        <MagnifyingGlass size={20} color="var(--color-heading)" />
+        <MagnifyingGlass size={20} />
         <Profile
           src={getUnsplashUrl('8Vt2haq8NSQ')}
           width={32}

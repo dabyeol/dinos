@@ -2,21 +2,22 @@
 
 import styled from '@emotion/styled';
 
-const Wrapper = styled.div<{ primary?: boolean }>`
-  width: 100%;
-  height: 64px;
+const Wrapper = styled.button<{ primary?: boolean }>`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  font-weight: ${({ primary }) => (primary ? 'bold' : '600')};
+  color: ${({ primary }) =>
+    primary ? 'var(--color-text-alt)' : 'var(--color-text)'};
   background-color: ${({ primary }) =>
     primary ? 'var(--color-primary)' : 'var(--color-secondary)'};
+  border: none;
   border-radius: 16px;
-  font-weight: bold;
-  color: ${({ primary }) => (primary ? '#fff' : 'var(--color-heading)')};
-  cursor: pointer;
   box-shadow: ${({ primary }) =>
-    primary ? '0px 2px 8px 0px rgba(0, 153, 102, 0.5)' : 'none'};
+    primary ? '0 2px 8px rgb(0 153 102 / 0.5)' : 'none'};
 `;
 
 interface ButtonProps {

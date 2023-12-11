@@ -4,18 +4,18 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 
 const Wrapper = styled.div`
-  flex: none;
-  width: 144px;
-  height: 144px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border-radius: 16px;
   position: relative;
   z-index: 0;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 144px;
+  height: 144px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
 `;
 
 const Background = styled(Image)`
@@ -25,27 +25,27 @@ const Background = styled(Image)`
 `;
 
 const Text = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 12px;
-  background: linear-gradient(transparent, black);
   gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(transparent, #000);
 `;
 
 const Description = styled.div`
   width: 100%;
   font-size: var(--text-xs);
-  font-weight: 600;
+  font-weight: 500;
   color: #eee;
 `;
 
 const Title = styled.div`
   width: 100%;
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
 `;
 

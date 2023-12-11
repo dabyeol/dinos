@@ -4,23 +4,27 @@ import styled from '@emotion/styled';
 import Titlebar from '../titlebar';
 
 const Wrapper = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 16px;
+  justify-content: flex-start;
+  width: 100%;
 `;
 
 const Slider = styled.div`
-  width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin: -24px;
-  padding: 24px;
-  overflow: auto;
   gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  padding: 24px;
+  margin: -24px;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 interface CardSliderProps {

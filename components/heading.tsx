@@ -5,41 +5,40 @@ import CircleFlag from './circle-flag';
 import Like from './like';
 
 const Wrapper = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 
 const Left = styled.div`
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Text = styled.div`
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
   gap: 6px;
+  align-items: flex-end;
+  justify-content: flex-start;
 `;
 
 const Title = styled.div`
   font-size: var(--text-lg);
-  font-weight: bold;
-  color: var(--color-heading);
+  font-weight: 600;
 `;
 
 const Description = styled.div`
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-description);
 `;
 

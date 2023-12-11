@@ -3,20 +3,20 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
   gap: 48px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 32px 24px;
 `;
 
-export const Wrapper = styled.div`
-  width: 100%;
+export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;

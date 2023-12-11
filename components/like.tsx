@@ -8,28 +8,28 @@ import { useState } from 'react';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 6px;
-  font-weight: 500;
+  align-items: center;
+  justify-content: center;
   font-size: var(--text-sm);
+  font-weight: 500;
   color: var(--color-description);
   cursor: pointer;
   user-select: none;
 `;
 
 const Icon = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 22px;
   height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 
   * {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
   }
 `;
 
@@ -61,7 +61,7 @@ const TextVariants: Variants = {
     color: 'var(--color-description)',
   },
   visible: {
-    color: 'var(--color-heading)',
+    color: 'var(--color-text)',
   },
 };
 

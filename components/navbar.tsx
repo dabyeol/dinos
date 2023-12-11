@@ -2,46 +2,29 @@
 
 import styled from '@emotion/styled';
 import { Compass, House, List, UsersThree } from '@phosphor-icons/react';
+import Tab from './tab';
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-background-alt);
-  position: sticky;
+  position: fixed;
   bottom: 0;
   z-index: 100;
-  justify-self: flex-end;
-`;
-
-const Tab = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: var(--color-float);
+  box-shadow: 0 -2px 8px rgb(0 0 0 / 10%);
 `;
 
 export default function Navbar() {
   return (
     <Wrapper>
-      <Tab>
-        <House size={32} weight="fill" color="var(--color-primary)" />
-      </Tab>
-      <Tab>
-        <Compass size={32} weight="fill" color="var(--color-description)" />
-      </Tab>
-      <Tab>
-        <UsersThree size={32} weight="fill" color="var(--color-description)" />
-      </Tab>
-      <Tab>
-        <List size={32} weight="fill" color="var(--color-description)" />
-      </Tab>
+      <Tab href="/" Icon={House} />
+      <Tab href="/explore" Icon={Compass} />
+      <Tab href="/community" Icon={UsersThree} />
+      <Tab href="/list" Icon={List} />
     </Wrapper>
   );
 }

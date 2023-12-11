@@ -5,21 +5,21 @@ import Image from 'next/image';
 import Heading from '../heading';
 
 const Wrapper = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 
 const ImageWrapper = styled.div`
-  width: 100%;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   position: relative;
+  width: 100%;
   aspect-ratio: 2 / 1;
+  overflow: hidden;
   border-radius: 16px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 
   img {
     object-fit: cover;

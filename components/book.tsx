@@ -3,50 +3,49 @@
 import styled from '@emotion/styled';
 
 const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 120px;
   height: 180px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   margin-right: 4px;
 `;
 
 const Paper = styled.div<{ index: number }>`
-  width: 100%;
+  position: absolute;
   top: ${({ index }) => index * 2}px;
   bottom: ${({ index }) => index * 2}px;
   left: ${({ index }) => index * 2}px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
   z-index: ${({ index }) => -index};
-  position: absolute;
+  width: 100%;
+  background-color: #fff;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 `;
 
 const Cover = styled.div`
-  width: 100%;
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   padding: 16px;
-  background-color: ${({ color }) => color};
-  position: relative;
-  align-content: center;
-  flex-wrap: nowrap;
-  border-radius: 8px;
   text-align: left;
+  background-color: ${({ color }) => color};
+  border-radius: 8px;
 `;
 
 const Title = styled.div`
   width: 100%;
   height: 100%;
   font-weight: bold;
-  color: #fff;
   line-height: 1.4;
+  color: #fff;
   text-align: left;
 `;
 
