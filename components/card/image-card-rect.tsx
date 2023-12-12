@@ -2,8 +2,9 @@
 
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
   position: relative;
   z-index: 0;
   display: flex;
@@ -61,7 +62,7 @@ export default function ImageCardRect({
   src,
 }: ImageCardRectProps) {
   return (
-    <Wrapper>
+    <Wrapper href="/explore/city">
       <Background src={src} width={144} height={144} alt="title" />
       <Text>
         <Description>{description}</Description>

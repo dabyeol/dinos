@@ -1,7 +1,14 @@
 'use client';
 
 import styled from '@emotion/styled';
-import { Compass, House, List, UsersThree } from '@phosphor-icons/react';
+import {
+  Compass,
+  House,
+  List,
+  MapTrifold,
+  UsersThree,
+} from '@phosphor-icons/react';
+import { usePathname } from 'next/navigation';
 import Tab from './tab';
 
 const Wrapper = styled.div`
@@ -19,12 +26,25 @@ const Wrapper = styled.div`
 `;
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <Wrapper>
-      <Tab href="/" Icon={House} />
-      <Tab href="/explore" Icon={Compass} />
-      <Tab href="/community" Icon={UsersThree} />
-      <Tab href="/list" Icon={List} />
+      {pathname.startsWith('/city') ? (
+        <>
+          <Tab href="/city" Icon={House} title="도시" />
+          <Tab href="/city/map" Icon={MapTrifold} title="지도" />
+          <Tab href="/city/community" Icon={UsersThree} title="커뮤니티" />
+          <Tab href="/city/list" Icon={List} title="목록" />
+        </>
+      ) : (
+        <>
+          <Tab href="/" Icon={House} title="도시" />
+          <Tab href="/explore" Icon={Compass} title="탐색" />
+          <Tab href="/community" Icon={UsersThree} title="커뮤니티" />
+          <Tab href="/list" Icon={List} title="목록" />
+        </>
+      )}
     </Wrapper>
   );
 }

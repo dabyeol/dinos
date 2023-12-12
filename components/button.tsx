@@ -10,8 +10,7 @@ const Wrapper = styled.button<{ primary?: boolean }>`
   width: 100%;
   height: 64px;
   font-weight: ${({ primary }) => (primary ? 'bold' : '600')};
-  color: ${({ primary }) =>
-    primary ? 'var(--color-text-alt)' : 'var(--color-text)'};
+  color: ${({ primary }) => (primary ? '#fff' : 'var(--color-text)')};
   background-color: ${({ primary }) =>
     primary ? 'var(--color-primary)' : 'var(--color-secondary)'};
   border: none;
@@ -20,11 +19,15 @@ const Wrapper = styled.button<{ primary?: boolean }>`
     primary ? '0 2px 8px rgb(0 153 102 / 0.5)' : 'none'};
 `;
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
   primary?: boolean;
 }
 
-export default function Button({ title, primary }: ButtonProps) {
-  return <Wrapper primary={primary}>{title}</Wrapper>;
+export default function Button({ title, primary, ...props }: ButtonProps) {
+  return (
+    <Wrapper primary={primary} {...props}>
+      {title}
+    </Wrapper>
+  );
 }

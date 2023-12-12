@@ -33,18 +33,6 @@ const Icon = styled.div`
   }
 `;
 
-// const HeartOutline = styled(Heart)`
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-// `;
-
-// const HeartFill = styled(Heart)`
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-// `;
-
 const LikeVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -72,8 +60,13 @@ interface LikeProps {
 export default function Like({ count }: LikeProps) {
   const [like, setLike] = useState(false);
 
+  const toggleLike = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setLike(!like);
+  };
+
   return (
-    <Wrapper onClick={() => setLike(!like)}>
+    <Wrapper onClick={toggleLike}>
       <motion.div
         variants={TextVariants}
         initial="hidden"
