@@ -4,6 +4,7 @@ import { getUnsplashUrl } from '@/lib/utils';
 import styled from '@emotion/styled';
 import { CaretDown, MagnifyingGlass } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import ListIcon from './list-icon';
 
 const Wrapper = styled.div`
@@ -51,11 +52,21 @@ const Profile = styled(Image)`
 `;
 
 export default function Topbar() {
+  const pathname = usePathname();
+
   return (
     <Wrapper>
       <Left>
         <Selected>
-          <ListIcon title="탐색" />
+          {pathname.startsWith('/city') ? (
+            <ListIcon
+              title="방콕"
+              description="23.11.12 ~ 23.12.11"
+              countryCode="th"
+            />
+          ) : (
+            <ListIcon title="탐색" />
+          )}
           <CaretDown size={16} weight="bold" color="var(--color-description)" />
         </Selected>
       </Left>

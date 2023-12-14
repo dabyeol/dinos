@@ -11,6 +11,14 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
+const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+`;
+
 const Title = styled.div`
   font-weight: 600;
 `;
@@ -35,10 +43,10 @@ export default function ListIcon({
   return (
     <Wrapper>
       <CircleFlag countryCode={countryCode} size={32} />
-      <div>
+      <Text>
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
-      </div>
+      </Text>
     </Wrapper>
   );
 }
